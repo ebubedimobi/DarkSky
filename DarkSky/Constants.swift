@@ -13,6 +13,5 @@ struct Constants{
     static let cellIdentifier = "ReuseableCell" 
     static let moscowUrl = "https://api.darksky.net/forecast/3e7e519ea86c8e3fcf67c0f4870513d7/55.753913,37.620836?units=si"
     static let petersburgUrl = "https://api.darksky.net/forecast/3e7e519ea86c8e3fcf67c0f4870513d7/59.950015,30.316599?units=si"
-    
-    
+    static let googleAPIKey = "AIzaSyD_U07gUOT90r1nmkZoSKZjRYJgxRxa94g"
 }
