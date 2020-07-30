@@ -66,7 +66,7 @@ extension ViewController: UITableViewDataSource{
         
         
         if internetConnection{
-           
+            
             return weatherModel?.count ?? 0
         }else{
             return petersburgcache?.count ?? moscowCache?.count ?? 0
@@ -78,7 +78,7 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-     
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! WeatherTableViewCell
         
         if internetConnection == false {
@@ -134,19 +134,29 @@ extension ViewController: WeatherManagerDelegate{
             
             if selectedCityName == "Petersburg"{
                 self.petersburgcache = realm.objects(PetersburgCache.self)
-                self.tableView.reloadData()
-                self.viewWeatherImage.image = UIImage(systemName: self.petersburgcache?[0].currentWeathImage ?? "")
-                self.viewDegreeLabel.text = self.petersburgcache?[0].currentTemp
-                self.weatherConditionLabel.text = self.petersburgcache?[0].weatherCondition
-
-
+                
+                if !(self.petersburgcache?.isEmpty ?? false){
+                    self.tableView.reloadData()
+                    self.viewWeatherImage.image = UIImage(systemName: self.petersburgcache?[0].currentWeathImage ?? "")
+                    self.viewDegreeLabel.text = self.petersburgcache?[0].currentTemp
+                    self.weatherConditionLabel.text = self.petersburgcache?[0].weatherCondition
+                    
+                }
+                
+                
                 
             }else if selectedCityName == "Moscow"{
                 self.moscowCache = realm.objects(MoscowCache.self)
-                self.tableView.reloadData()
-                self.viewWeatherImage.image = UIImage(systemName: self.moscowCache?[0].currentWeathImage ?? "")
-                self.viewDegreeLabel.text = self.moscowCache?[0].currentTemp
-                self.weatherConditionLabel.text = self.moscowCache?[0].weatherCondition
+                
+                if !(self.moscowCache?.isEmpty ?? false){
+                    
+                    self.tableView.reloadData()
+                    self.viewWeatherImage.image = UIImage(systemName: self.moscowCache?[0].currentWeathImage ?? "")
+                    self.viewDegreeLabel.text = self.moscowCache?[0].currentTemp
+                    self.weatherConditionLabel.text = self.moscowCache?[0].weatherCondition
+                    
+                }
+                
                 
             }
         }

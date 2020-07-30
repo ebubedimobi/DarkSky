@@ -22,7 +22,6 @@ struct LocationManager {
     func fetchWeather(using latitude: Double, and longitude: Double){
         let urlString = "\(Constants.baseURL)\(latitude),\(longitude)?units=si"
         
-        print(urlString)
         performRequest(with: urlString)
         
     }
@@ -45,20 +44,18 @@ struct LocationManager {
                     return
                 }
                 
-                print("there is internettttt")
                 
                 if let safeData = data{
                     
                     if let locationModule = self.parseJSON(with: safeData){
                         
-                       print( locationModule.currentTempString)
+                      
                         DispatchQueue.main.async {
                             //TODO: -  update delegate method
                             
                             self.locationManagerDelegate?.didUpdateWeather(with: locationModule)
                             
                         }
-                        
                     }
                     
                 }else {

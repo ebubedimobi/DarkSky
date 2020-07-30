@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R5Z-1i-kZi">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -17,36 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FU-tI-BAv">
-                                <rect key="frame" x="207" y="172" width="0.0" height="0.0"/>
+                                <rect key="frame" x="207" y="152" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" name="weatherColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eU5-8R-YSl">
-                                <rect key="frame" x="61" y="44" width="292.5" height="120"/>
+                                <rect key="frame" x="71" y="44" width="272.5" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PMU-25-wow">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <color key="tintColor" name="weatherColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="Qtu-lO-mgC"/>
-                                            <constraint firstAttribute="height" constant="120" id="d9F-cF-E0u"/>
+                                            <constraint firstAttribute="width" constant="100" id="Qtu-lO-mgC"/>
+                                            <constraint firstAttribute="height" constant="100" id="d9F-cF-E0u"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugE-rn-mmc" userLabel="Temperature Label">
-                                        <rect key="frame" x="120" y="0.0" width="93" height="120"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="60"/>
+                                        <rect key="frame" x="100" y="0.0" width="93" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="70"/>
                                         <color key="textColor" name="weatherColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bf-cn-PCF" userLabel="Temperature Label">
-                                        <rect key="frame" x="213" y="0.0" width="39" height="120"/>
+                                        <rect key="frame" x="193" y="0.0" width="39" height="100"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="100"/>
                                         <color key="textColor" name="weatherColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChY-E5-eqF" userLabel="Temperature Label">
-                                        <rect key="frame" x="252" y="0.0" width="40.5" height="120"/>
+                                        <rect key="frame" x="232" y="0.0" width="40.5" height="100"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                         <color key="textColor" name="weatherColor"/>
                                         <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="98" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SPj-qH-6iE">
-                                <rect key="frame" x="0.0" y="224" width="414" height="589"/>
+                                <rect key="frame" x="0.0" y="204" width="414" height="609"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="backgroundColor"/>
                                 <connections>
@@ -63,7 +63,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="gIk-YV-mfA">
-                                <rect key="frame" x="36" y="177" width="342" height="39"/>
+                                <rect key="frame" x="36" y="157" width="342" height="39"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqH-CF-vjO">
                                         <rect key="frame" x="0.0" y="0.0" width="156" height="39"/>
@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="-801" y="125"/>
         </scene>
-        <!--Карта-->
+        <!--Map View Controller-->
         <scene sceneID="eI1-1p-rbA">
             <objects>
                 <viewController id="3oa-gG-tfc" customClass="MapViewController" customModule="DarkSky" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,11 +127,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9l-bm-UKs" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-Rc-BBV">
-                                <rect key="frame" x="62.5" y="314.5" width="289" height="184"/>
+                                <rect key="frame" x="62.5" y="270.5" width="289" height="184"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Nr1-6P-7p3">
                                         <rect key="frame" x="22" y="5.5" width="245" height="114"/>
@@ -198,17 +198,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HW4-KD-DjA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Карта" image="map" catalog="system" selectedImage="map" id="az0-mw-XTt"/>
+                    <navigationItem key="navigationItem" id="Ik6-bi-irY">
+                        <barButtonItem key="rightBarButtonItem" title="Cкрыть Погода" id="U7K-qL-7K2">
+                            <connections>
+                                <action selector="showInfoButton:" destination="3oa-gG-tfc" id="HMf-2y-5Zg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="degreeLabel" destination="AB0-Tv-4in" id="Vch-qa-AEp"/>
                         <outlet property="mapView" destination="g9l-bm-UKs" id="uMd-f6-CC2"/>
+                        <outlet property="showInfoOutlet" destination="U7K-qL-7K2" id="oq6-y2-beL"/>
                         <outlet property="weatherConditionLabel" destination="Xa6-VS-Y3G" id="XTO-rq-n5E"/>
                         <outlet property="weatherImage" destination="clq-Ho-H6E" id="uRo-A5-QBb"/>
+                        <outlet property="weatherView" destination="g1h-Rc-BBV" id="36F-nN-rBk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCB-XZ-w1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="-46"/>
+            <point key="canvasLocation" x="2521.739130434783" y="-46.205357142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h3C-aq-NJn">
@@ -224,12 +232,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="E7t-y2-zYJ"/>
-                        <segue destination="3oa-gG-tfc" kind="relationship" relationship="viewControllers" id="AW2-cW-gbL"/>
+                        <segue destination="dPf-of-Ggc" kind="relationship" relationship="viewControllers" id="AW2-cW-gbL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ypk-Wb-lNr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="690" y="46"/>
+        </scene>
+        <!--Карта-->
+        <scene sceneID="gmm-AI-J5F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dPf-of-Ggc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Карта" image="map" catalog="system" selectedImage="map" id="az0-mw-XTt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="KnJ-Ui-jYp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="backgroundColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3oa-gG-tfc" kind="relationship" relationship="rootViewController" id="82x-l6-cVx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfv-LY-VTh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611.5942028985507" y="-46.205357142857139"/>
         </scene>
     </scenes>
     <resources>
