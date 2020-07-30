@@ -104,6 +104,7 @@ extension ViewController: UITableViewDataSource{
                 
             }
         }
+        
         if weatherModel?.count != 0 {
             cell.cellDegreeLabel.text = weatherModel?[indexPath.row].dailyTempString
             cell.cellWeatherImage.image = UIImage(systemName: weatherModel?[indexPath.row].dailyWeatherImage ?? "")

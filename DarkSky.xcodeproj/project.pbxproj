@@ -22,6 +22,10 @@
 		B2E8F54824D2F00E004380EF /* PetersburgCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F54724D2F00E004380EF /* PetersburgCache.swift */; };
 		B2E8F54A24D2F766004380EF /* MoscowCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F54924D2F766004380EF /* MoscowCache.swift */; };
 		B2E8F54C24D33560004380EF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F54B24D33560004380EF /* MapViewController.swift */; };
+		B2E8F54E24D347E4004380EF /* LocationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F54D24D347E4004380EF /* LocationCache.swift */; };
+		B2E8F55324D3495D004380EF /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F55224D3495D004380EF /* LocationData.swift */; };
+		B2E8F55524D34ADB004380EF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F55424D34ADB004380EF /* LocationManager.swift */; };
+		B2E8F55724D34DC0004380EF /* LocationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F55624D34DC0004380EF /* LocationModule.swift */; };
 		B4DF8CE8F4309FE0059EFDCB /* Pods_DarkSky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED664B1BEBE196C68274C7F7 /* Pods_DarkSky.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,10 @@
 		B2E8F54724D2F00E004380EF /* PetersburgCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetersburgCache.swift; sourceTree = "<group>"; };
 		B2E8F54924D2F766004380EF /* MoscowCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoscowCache.swift; sourceTree = "<group>"; };
 		B2E8F54B24D33560004380EF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B2E8F54D24D347E4004380EF /* LocationCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCache.swift; sourceTree = "<group>"; };
+		B2E8F55224D3495D004380EF /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		B2E8F55424D34ADB004380EF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B2E8F55624D34DC0004380EF /* LocationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModule.swift; sourceTree = "<group>"; };
 		ED664B1BEBE196C68274C7F7 /* Pods_DarkSky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarkSky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,9 +109,10 @@
 				B2E8F52124D2BCF1004380EF /* AppDelegate.swift */,
 				B2E8F52324D2BCF1004380EF /* SceneDelegate.swift */,
 				B2E8F53D24D2C81D004380EF /* Constants.swift */,
+				B2E8F54624D2EFE7004380EF /* Weather Cache */,
 				B2E8F53824D2C52A004380EF /* Model */,
-				B2E8F53624D2C50D004380EF /* Controller */,
 				B2E8F53524D2C504004380EF /* View */,
+				B2E8F53624D2C50D004380EF /* Controller */,
 				B2E8F52A24D2BCF3004380EF /* Assets.xcassets */,
 				B2E8F52C24D2BCF3004380EF /* LaunchScreen.storyboard */,
 				B2E8F52F24D2BCF3004380EF /* Info.plist */,
@@ -115,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				B2E8F52724D2BCF1004380EF /* Main.storyboard */,
+				B2E8F53924D2C572004380EF /* WeatherTableViewCell.swift */,
 				B2E8F53A24D2C572004380EF /* WeatherTableViewCell.xib */,
 			);
 			path = View;
@@ -125,7 +135,6 @@
 			children = (
 				B2E8F52524D2BCF1004380EF /* ViewController.swift */,
 				B2E8F54B24D33560004380EF /* MapViewController.swift */,
-				B2E8F53924D2C572004380EF /* WeatherTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -133,8 +142,8 @@
 		B2E8F53824D2C52A004380EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B2E8F54624D2EFE7004380EF /* Weather Cache */,
 				B2E8F54524D2EFCD004380EF /* WeatherNetworking and control */,
+				B2E8F55124D34913004380EF /* LocationWeatherManager */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,8 +163,19 @@
 			children = (
 				B2E8F54724D2F00E004380EF /* PetersburgCache.swift */,
 				B2E8F54924D2F766004380EF /* MoscowCache.swift */,
+				B2E8F54D24D347E4004380EF /* LocationCache.swift */,
 			);
 			path = "Weather Cache";
+			sourceTree = "<group>";
+		};
+		B2E8F55124D34913004380EF /* LocationWeatherManager */ = {
+			isa = PBXGroup;
+			children = (
+				B2E8F55224D3495D004380EF /* LocationData.swift */,
+				B2E8F55624D34DC0004380EF /* LocationModule.swift */,
+				B2E8F55424D34ADB004380EF /* LocationManager.swift */,
+			);
+			path = LocationWeatherManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +318,12 @@
 				B2E8F54424D2D38D004380EF /* WeatherManager.swift in Sources */,
 				B2E8F52624D2BCF1004380EF /* ViewController.swift in Sources */,
 				B2E8F54824D2F00E004380EF /* PetersburgCache.swift in Sources */,
+				B2E8F54E24D347E4004380EF /* LocationCache.swift in Sources */,
 				B2E8F54A24D2F766004380EF /* MoscowCache.swift in Sources */,
 				B2E8F54224D2CE92004380EF /* WeatherModel.swift in Sources */,
+				B2E8F55324D3495D004380EF /* LocationData.swift in Sources */,
+				B2E8F55524D34ADB004380EF /* LocationManager.swift in Sources */,
+				B2E8F55724D34DC0004380EF /* LocationModule.swift in Sources */,
 				B2E8F52224D2BCF1004380EF /* AppDelegate.swift in Sources */,
 				B2E8F54024D2CCFD004380EF /* WeatherData.swift in Sources */,
 				B2E8F52424D2BCF1004380EF /* SceneDelegate.swift in Sources */,

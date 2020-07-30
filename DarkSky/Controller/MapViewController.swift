@@ -12,11 +12,18 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
-    let locationManager = CLLocationManager()
+    @IBOutlet weak var weatherConditionLabel: UILabel!
+    @IBOutlet weak var weatherImage: UIImageView!
+    
+    @IBOutlet weak var degreeLabel: UILabel!
+    
+    let cllocationManager = CLLocationManager()
+    var locationManager = LocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.locationManagerDelegate = self
         
         
         mapView.settings.compassButton = true
@@ -32,23 +39,13 @@ class MapViewController: UIViewController {
     
     private func getCurrentLocation(){
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
-        
-        
-        
+        cllocationManager.delegate = self
+        cllocationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        cllocationManager.requestWhenInUseAuthorization()
+        cllocationManager.requestLocation()
         
     }
-    
 
-    
-    
-    
-    
-   
-    
 }
 //MARK: - CLLocationManagerDelegate
 
@@ -57,11 +54,11 @@ extension MapViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
         if let location = locations.last {
-            locationManager.stopUpdatingLocation()
+            cllocationManager.stopUpdatingLocation()
             let lat = location.coordinate.latitude
             let lon = location.coordinate.longitude
             
-            print(lat)
+            locationManager.fetchWeather(using: lat, and: lon)
 
 
         }
@@ -71,4 +68,28 @@ extension MapViewController: CLLocationManagerDelegate{
         print(error)
     }
 
+}
+//MARK: - LocationManagerDelegate
+
+
+extension MapViewController: LocationManagerDelegate{
+    func didUpdateWeather(with weatherModel: LocationModule) {
+        
+        print(weatherModel.weatherCondition)
+        DispatchQueue.main.async {
+            
+            self.degreeLabel.text = weatherModel.currentTempString
+            self.weatherImage.image = UIImage(systemName: weatherModel.currentWeathImage)
+            self.weatherConditionLabel.text = weatherModel.weatherCondition
+        }
+    }
+    
+    func didntUpdateWeather() {
+        
+    }
+    
+    
+    
+    
+    
 }

@@ -23,56 +23,45 @@ struct WeatherModel{
     //MARK: - conversions to usable strings
     
     var currentTempString: String{
-        get{
-            return String(format: "%.f", currentTemp)
-        }set {
-            
-        }
+        
+        return String(format: "%.f", currentTemp)
+        
         
     }
     
     var dailyTempString: String{
-        get{
-            return String(format: "%.f", dailyTemp)
-        }set{
-            
-        }
+        
+        return String(format: "%.f", dailyTemp)
+        
     }
     
     var dateString: String{
-        get{
-            let date = Date(timeIntervalSince1970: Double(time))
-            
-            let dateFormatter = DateFormatter()
-            
-            dateFormatter.locale = Locale(identifier: "ru_RU")
-            
-            dateFormatter.timeStyle = .none
-            dateFormatter.dateFormat = "E, d MMM"
-            
-            
-            return dateFormatter.string(from: date)
-        }set {
-            
-            
-        }
+        
+        let date = Date(timeIntervalSince1970: Double(time))
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        
+        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "E, d MMM"
+        
+        
+        return dateFormatter.string(from: date)
+        
     }
     
     var currentWeathImage: String{
-        get{
-            return checkCondition(with: currentWeathIcon)
-        }set{
-            
-        }
+        
+        return checkCondition(with: currentWeathIcon)
+        
         
     }
     
     var dailyWeatherImage: String{
-        get{
-            return checkCondition(with: dailyWeathIcon)
-        }set{
-            
-        }
+        
+        return checkCondition(with: dailyWeathIcon)
+        
     }
     
     private func checkCondition(with icon: String)-> String{
@@ -96,24 +85,22 @@ struct WeatherModel{
     }
     
     var weatherCondition: String{
-        get{
-            switch currentWeathIcon {
-            case "clear-day", "clear-night":
-                return "ЯСНО"
-            case "rain":
-                return "ДОЖДЬ"
-            case "snow":
-                return "СНЕГ"
-            case "sleet", "wind":
-                return "ВЕТЕР"
-            case "cloudy","partly-cloudy-day","partly-cloudy-night":
-                return "ОБЛАЧНО"
-            default:
-                return "ОБЛАЧНО"
-            }
-        }set{
-            
+        
+        switch currentWeathIcon {
+        case "clear-day", "clear-night":
+            return "ЯСНО"
+        case "rain":
+            return "ДОЖДЬ"
+        case "snow":
+            return "СНЕГ"
+        case "sleet", "wind":
+            return "ВЕТЕР"
+        case "cloudy","partly-cloudy-day","partly-cloudy-night":
+            return "ОБЛАЧНО"
+        default:
+            return "ОБЛАЧНО"
         }
+        
         
     }
     

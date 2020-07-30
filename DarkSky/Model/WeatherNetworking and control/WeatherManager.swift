@@ -47,7 +47,7 @@ struct WeatherManager {
                     return
                 }
                 
-                print("there is internet")
+              
                 
                 if let safeData = data{
                     

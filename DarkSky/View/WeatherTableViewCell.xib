@@ -79,7 +79,7 @@
     <resources>
         <image name="cloud" catalog="system" width="128" height="87"/>
         <namedColor name="backgroundColor">
-            <color red="0.84147912260000002" green="0.44353312249999999" blue="0.40238079430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68400001525878906" green="0.83099997043609619" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="weatherColor">
             <color red="0.1080000028014183" green="0.26199999451637268" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
