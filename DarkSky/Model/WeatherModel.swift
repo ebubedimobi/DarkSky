@@ -14,9 +14,13 @@ struct WeatherModel{
     let currentWeathIcon: String
     let currentTemp: Double
     
+ 
+    
     let dailyWeathIcon: String
     let dailyTemp: Double
     let time: Int
+    
+    //MARK: - conversions to usable strings
     
     var currentTempString: String{
         return String(format: "%.f", currentTemp)
@@ -28,8 +32,20 @@ struct WeatherModel{
         
     }
     
-    var date: Date{
-        return Date(timeIntervalSince1970: Double(time))
+    var dateString: String{
+        let date = Date(timeIntervalSince1970: Double(time))
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        
+        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "E, d MMM"
+        
+        
+        
+        
+        return dateFormatter.string(from: date)
         
     }
     
@@ -63,7 +79,31 @@ struct WeatherModel{
         }
     }
     
+    var weatherCondition: String{
+         
+         switch currentWeathIcon {
+         case "clear-day", "clear-night":
+             return "ЯСНО"
+         case "rain":
+             return "ДОЖДЬ"
+         case "snow":
+             return "СНЕГ"
+         case "sleet", "wind":
+             return "ВЕТЕР"
+         case "cloudy","partly-cloudy-day","partly-cloudy-night":
+             return "ОБЛАЧНО"
+         default:
+             return "ОБЛАЧНО"
+         }
+         
+     }
+    
     
     
     
 }
+
+
+
+
+

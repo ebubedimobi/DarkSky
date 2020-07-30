@@ -9,7 +9,9 @@
 import Foundation
 
 
-struct weatherData: Codable{
+
+
+struct WeatherData: Codable{
     
     let currently: Currently
     let daily: Daily
@@ -29,6 +31,6 @@ struct Daily: Codable {
 
 struct DailyData: Codable {
     let icon: String
-    let temperature: Double
+    let temperatureHigh: Double
     let time: Int
 }

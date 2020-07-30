@@ -18,6 +18,7 @@
 		B2E8F53E24D2C81D004380EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F53D24D2C81D004380EF /* Constants.swift */; };
 		B2E8F54024D2CCFD004380EF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F53F24D2CCFD004380EF /* WeatherData.swift */; };
 		B2E8F54224D2CE92004380EF /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F54124D2CE92004380EF /* WeatherModel.swift */; };
+		B2E8F54424D2D38D004380EF /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8F54324D2D38D004380EF /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B2E8F53D24D2C81D004380EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B2E8F53F24D2CCFD004380EF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		B2E8F54124D2CE92004380EF /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		B2E8F54324D2D38D004380EF /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				B2E8F53F24D2CCFD004380EF /* WeatherData.swift */,
 				B2E8F54124D2CE92004380EF /* WeatherModel.swift */,
+				B2E8F54324D2D38D004380EF /* WeatherManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				B2E8F53E24D2C81D004380EF /* Constants.swift in Sources */,
 				B2E8F53B24D2C572004380EF /* WeatherTableViewCell.swift in Sources */,
+				B2E8F54424D2D38D004380EF /* WeatherManager.swift in Sources */,
 				B2E8F52624D2BCF1004380EF /* ViewController.swift in Sources */,
 				B2E8F54224D2CE92004380EF /* WeatherModel.swift in Sources */,
 				B2E8F52224D2BCF1004380EF /* AppDelegate.swift in Sources */,
